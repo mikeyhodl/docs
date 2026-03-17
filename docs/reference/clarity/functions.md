@@ -224,31 +224,38 @@ Takes a list and a value of the same entry type, and returns a new list with max
 
 ***
 
-## as-contract?
+## as-contract​
 
-Introduced in: **Clarity 4**
-
-{% hint style="info" %}
-The previous version of `as-contract`, introduced in Clarity 1, has changed to `as-contract?` in Clarity 4, with several new security enhancements. If you are using Clarity 1-3, the previous signature and description for `as-contract` can be found in the dropdown below.
+{% hint style="danger" %}
+Deprecated in Clarity 4.
 {% endhint %}
 
-<details>
+Introduced in: **Clarity 1**
 
-<summary>Previous <code>as-contract</code></summary>
+**input:** `A`
 
-**input:** `A` **output:** `A` **signature:** `(as-contract expr)`
+**output:** `A`
 
-**description:** Executes `expr` with the tx-sender switched to the contract's principal and returns the result.
+**signature:** `(as-contract expr)`
+
+**description:**\
+The `as-contract` function switches the current context's `tx-sender` value to the _contract's_ principal and executes `expr` with that context. It returns the resulting value of `expr`.
 
 **example:**
-
-Copy
 
 ```
 (as-contract tx-sender) ;; Returns S1G2081040G2081040G2081040G208105NK8PE5.docs-test
 ```
 
-</details>
+***
+
+## as-contract?
+
+Introduced in: **Clarity 4**
+
+{% hint style="info" %}
+The previous version of `as-contract`, introduced in Clarity 1, has changed to `as-contract?` in Clarity 4, with several new security enhancements.
+{% endhint %}
 
 **Input**:
 
@@ -936,6 +943,36 @@ Like other kinds of definition statements, `define-trait` may only be used at th
 
 ***
 
+## element-at​
+
+{% hint style="danger" %}
+Deprecated in Clarity 2.
+{% endhint %}
+
+Introduced in: **Clarity 1**
+
+**input:** `sequence_A, uint`
+
+**output:** `(optional A)`
+
+**signature:** `(element-at? sequence index)`
+
+**description:**
+
+The `element-at?` function returns the element at `index` in the provided sequence. Applicable sequence types are `(list A)`, `buff`, `string-ascii` and `string-utf8`, for which the corresponding element types are, respectively, `A`, `(buff 1)`, `(string-ascii 1)` and `(string-utf8 1)`. In Clarity1, `element-at` must be used (without the `?`). The `?` is added in Clarity2 for consistency -- built-ins that return responses or optionals end in `?`. The Clarity1 spelling is left as an alias in Clarity2 for backwards compatibility.
+
+**example:**
+
+```
+(element-at? "blockstack" u5) ;; Returns (some "s")
+(element-at? (list 1 2 3 4 5) u5) ;; Returns none
+(element-at? (list 1 2 3 4 5) (+ u1 u2)) ;; Returns (some 4)
+(element-at? "abcd" u1) ;; Returns (some "b")
+(element-at? 0xfb01 u1) ;; Returns (some 0x01)
+```
+
+***
+
 ## element-at?
 
 Introduced in: **Clarity 2**
@@ -1193,6 +1230,10 @@ Fetches value associated with `key-name` from a tuple. If an optional tuple is s
 
 ## get-block-info?
 
+{% hint style="danger" %}
+Deprecated in Clarity 3.
+{% endhint %}
+
 Introduced in: **Clarity 1**
 
 **input:** `BlockInfoPropertyName, uint`\
@@ -1369,6 +1410,36 @@ Asserts that the contract implements the given trait. Checked at publish time. M
 (impl-trait 'SPAXYA5XS51713FDTQ8H94EJ4V579CXMTRNBZKSF.token-a.token-trait)
 (define-public (get-balance (account principal))
   (ok u0))
+```
+
+***
+
+## index-of​
+
+{% hint style="danger" %}
+Deprecated in Clartiy 2.
+{% endhint %}
+
+Introduced in: **Clarity 1**
+
+**input:** `sequence_A, A`
+
+**output:** `(optional uint)`
+
+**signature:** `(index-of? sequence item)`
+
+**description:**
+
+The `index-of?` function returns the first index at which `item` can be found, using `is-eq` checks, in the provided sequence. Applicable sequence types are `(list A)`, `buff`, `string-ascii` and `string-utf8`, for which the corresponding element types are, respectively, `A`, `(buff 1)`, `(string-ascii 1)` and `(string-utf8 1)`. If the target item is not found in the sequence (or if an empty string or buffer is supplied), this function returns `none`. In Clarity1, `index-of` must be used (without the `?`). The `?` is added in Clarity2 for consistency -- built-ins that return responses or optionals end in `?`. The Clarity1 spelling is left as an alias in Clarity2 for backwards compatibility.
+
+**example:**
+
+```
+(index-of? "blockstack" "b") ;; Returns (some u0)
+(index-of? "blockstack" "k") ;; Returns (some u4)
+(index-of? "blockstack" "") ;; Returns none
+(index-of? (list 1 2 3 4 5) 6) ;; Returns none
+(index-of? 0xfb01 0x01) ;; Returns (some u1)
 ```
 
 ***

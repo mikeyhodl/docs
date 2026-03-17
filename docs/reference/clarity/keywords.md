@@ -6,6 +6,10 @@ description: The complete reference guide to all Clarity keywords.
 
 ### block-height
 
+{% hint style="danger" %}
+Deprecated in Clarity 3.
+{% endhint %}
+
 Introduced in: Clarity 1
 
 output: `uint`
