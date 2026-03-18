@@ -38,7 +38,7 @@
     * [Pegging out sBTC](sbtc/sbtc-operations/withdrawal.md "Peg-out")
     * [Peg-in vs Peg-out Duration](sbtc/sbtc-operations/deposit-vs-withdrawal-times.md "Peg-in vs Peg-out Duration")
   * [Emily API](sbtc/emily-api.md)
-  * [The sBTC Signers' Single UTXO](sbtc/peg-wallet-utxo.md "Peg Wallet UTXO")
+  * [The sBTC Signers](sbtc/sbtc-signers.md "sBTC Signers")
   * [The Clarity Contracts Powering sBTC](sbtc/clarity-contracts/README.md "Clarity Contracts")
     * [sBTC Signers](sbtc/clarity-contracts/sbtc-signers.md)
     * [sBTC Token](sbtc/clarity-contracts/sbtc-token.md)

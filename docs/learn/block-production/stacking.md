@@ -1,4 +1,4 @@
-# Stacking
+# Stacking: How STX Holders Contribute
 
 <div data-with-frame="true"><figure><img src="../.gitbook/assets/staking-cover.png" alt=""><figcaption></figcaption></figure></div>
 
@@ -13,7 +13,6 @@
 
 * Stacking locks STX to help secure the network and earn BTC rewards.
 * It’s part of Proof of Transfer (PoX), where miners spend BTC and that BTC goes to Stackers.
-* Stackers help validate and sign blocks.
 * STX is locked for fixed cycles and cannot be moved during that time.
 * There’s a minimum threshold to Stack directly, but users can delegate to pools.
 * The model aligns miner and holder incentives while anchoring to Bitcoin.

@@ -1,4 +1,4 @@
-# Peg Wallet UTXO
+# The sBTC Signers
 
 The Peg Wallet UTXO is a fundamental element of the sBTC system, serving as the Bitcoin backing for all sBTC tokens in circulation. The system uses a Single UTXO Model: the sBTC peg wallet is consistently represented as a single Unspent Transaction Output (UTXO) on the Bitcoin blockchain. This design offers simplicity and improved efficiency in managing the peg wallet.
 
@@ -64,3 +64,17 @@ The Single UTXO Model is designed to balance simplicity and operational efficien
 {% hint style="warning" %}
 Security is paramount: multi-signature approval, audits, and monitoring are core controls to protect the peg wallet.
 {% endhint %}
+
+***
+
+### What's the difference between Stacks Signers vs sBTC Signers
+
+| Role                       | Stacks Signer                      | sBTC Signer                                        |
+| -------------------------- | ---------------------------------- | -------------------------------------------------- |
+| **Primary Responsibility** | Signs and validates Stacks blocks  | Secures peg for sBTC (Bitcoin ↔ Stacks)            |
+| **What They Sign**         | Stacks block data                  | Bitcoin transactions (peg-in / peg-out)            |
+| **Layer**                  | Stacks consensus layer             | Bitcoin layer (via threshold signatures)           |
+| **Purpose**                | Ensure canonical chain progression | Ensure safe custody + movement of BTC backing sBTC |
+| **Trust Model**            | Part of Stacks consensus           | Threshold signer set managing BTC                  |
+| **Failure Impact**         | Chain instability / fork risk      | Risk to BTC peg integrity                          |
+| **Assets Involved**        | STX                                | BTC                                                |

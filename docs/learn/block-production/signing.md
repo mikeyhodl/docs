@@ -1,4 +1,4 @@
-# Signing
+# Signing: Verifying Block Validity
 
 <div data-with-frame="true"><figure><img src="../.gitbook/assets/signing-cover.png" alt=""><figcaption></figcaption></figure></div>
 
@@ -43,9 +43,16 @@ When a miner produces a block, Stackers execute a distributed signing protocol t
 
 Nakamoto uses the [WSTS protocol with the FIRE extension](https://trust-machines.github.io/wsts/wsts.pdf), which admits a distributed key generation and signature generation algorithm pair whose CPU and network bandwidth complexity grows with the number of distinct Stackers. The FIRE extension enables WSTS to tolerate byzantine Stackers.
 
+#### The relationship between Stackers and Signers
+
 Here is a diagram outlining the relationship between signing and stacking.
 
 <div data-with-frame="true"><figure><img src="../.gitbook/assets/stacking-vs-signing.png" alt=""><figcaption></figcaption></figure></div>
+
+* Not all stackers are signers \
+  → because stackers can **delegate** their participation (including signing responsibilities)
+* All signers are backed by **their own STX** or **delegated STX**\
+  → to be in the signer set, you must represent **stacked STX weight**
 
 ***
 
