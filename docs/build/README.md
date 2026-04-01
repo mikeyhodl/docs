@@ -10,7 +10,6 @@ description: Build powerful apps, secured by Bitcoin.
 
 <summary><strong>New to building with Stacks? Check out these weekly virtual meets!</strong></summary>
 
-* **Stacks DevRel office hours**: Follow and enable notifications for [@StacksDevs](https://x.com/StacksDevs) on Twitter to catch alerts for our weekly livestreams every Thursday at 10am EST. Office Hours are the easiest way to stay in the loop on product drops, live demos, community builder spotlights, and more. Stay up-to-date with release discussions, real-time walkthroughs, and builder highlights that matter.
 * **Clarity Working Group**: An open, developer-focused initiative dedicated to supporting builders across the Stacks ecosystem. The group brings together experienced Clarity engineers (“Clarity giga chads”), auditors, educators, grant project teams, and new developers to collaborate, learn, and advance smart contract development on Bitcoin. Check out the calendar [link](https://www.addevent.com/event/yc0x95fky8y4) to join every other Tuesday.
 * **AI BTC Working Group:** Join the **AI BTC Working Group**'s (WG) weekly meeting on AIBTC's twitter account, where they delve into the exciting intersection of AI and Bitcoin. Check out the calendar [link](https://www.addevent.com/event/c3qjy462xr82) to join every Thursday.
 
@@ -68,7 +67,7 @@ If you’re responsible for operating or maintaining Stacks-related infrastructu
 
 {% tab title="Reference" %}
 **Where do you look up technical details such as types, definitions, and configuration?**\
-The [Reference](https://app.gitbook.com/s/GVj1Z9vMuEOMe7oH7Wnq/node-operations/readme) section contains authoritative technical documentation for Stacks devtools and APIs. This includes function and type definitions for Clarity and Stacks.js, API endpoint schemas, and interactive API playgrounds.
+The [Reference](https://app.gitbook.com/s/GVj1Z9vMuEOMe7oH7Wnq/node-operations/readme-1) section contains authoritative technical documentation for Stacks devtools and APIs. This includes function and type definitions for Clarity and Stacks.js, API endpoint schemas, and interactive API playgrounds.
 
 If you’re an experienced Stacks developer looking to quickly reference a specific method, type, or API response, this section is built for fast lookup and precision.
 {% endtab %}
