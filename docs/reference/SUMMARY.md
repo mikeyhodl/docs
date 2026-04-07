@@ -35,10 +35,10 @@
     ```
 * [Stacks Mesh API](api/stacks-mesh-api/README.md)
   * ```yaml
-    type: builtin:openapi
     props:
       models: true
       downloadLink: false
+    type: builtin:openapi
     dependencies:
       spec:
         ref:
@@ -47,10 +47,10 @@
     ```
 * [USDCx Bridge](api/usdcx-bridge/README.md)
   * ```yaml
-    type: builtin:openapi
     props:
       models: false
       downloadLink: false
+    type: builtin:openapi
     dependencies:
       spec:
         ref:
@@ -59,10 +59,10 @@
     ```
 * [sBTC Bridge](api/sbtc-bridge/README.md)
   * ```yaml
-    type: builtin:openapi
     props:
       models: true
       downloadLink: false
+    type: builtin:openapi
     dependencies:
       spec:
         ref:
